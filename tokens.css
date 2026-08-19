@@ -1,0 +1,63 @@
+/* =========================================================
+   DESIGN TOKENS
+   Inspirados en el panel real de Connectif (stage.connectif.cloud)
+   Fuente: análisis de CSS computado, agosto 2026.
+   ========================================================= */
+:root {
+  /* Color */
+  --color-primary: #5e91eb;
+  --color-primary-dark: #3f6fc4;
+  --color-primary-light: #e8f0fd;
+  --color-text-heading: #212121;
+  --color-text-strong: #424242;
+  --color-text-body: #47535d;
+  --color-text-muted: #8a97a1;
+  --color-bg: #ffffff;
+  --color-bg-soft: #f7f9fc;
+  --color-border: #eeeeee;
+  --color-success: #2e9e6b;
+  --color-success-bg: #e4f6ee;
+  --color-warning: #f0a83a;
+  --color-warning-bg: #fdf2e3;
+  --color-danger: #e2574c;
+  --color-danger-bg: #fceceb;
+  --color-info: #3aa0f0;
+
+  /* Copilot / AI theme (dark + purple) */
+  --copilot-bg: #14121f;
+  --copilot-bg-elevated: #1c1930;
+  --copilot-accent: #8b6bff;
+  --copilot-accent-2: #b98bff;
+  --copilot-text: #f4f2ff;
+
+  /* Node colors (workflow builder) */
+  --node-trigger: #7c5cfc;
+  --node-action-email: #f0a83a;
+  --node-action-system: #9aa4ad;
+  --node-action-web: #3aa0f0;
+  --node-ecommerce: #8a5cf6;
+  --node-condition-yes: #2e9e6b;
+  --node-condition-no: #e2574c;
+
+  /* Type */
+  --font-base: "Source Sans Pro", "Segoe UI", Helvetica, Arial, sans-serif;
+  --fs-body: 14px;
+  --fs-h1: 34px;
+  --fs-h2: 24px;
+  --fs-h3: 18px;
+  --fs-small: 12px;
+  --fw-regular: 400;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* Radius / shadow */
+  --radius-card: 16px;
+  --radius-btn: 4px;
+  --radius-pill: 999px;
+  --shadow-soft: 0 2px 10px rgba(20, 30, 45, 0.06);
+  --shadow-float: 0 10px 30px rgba(20, 30, 45, 0.16);
+
+  /* Layout */
+  --sidebar-width: 78px;
+  --topbar-height: 64px;
+}

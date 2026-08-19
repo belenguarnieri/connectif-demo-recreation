@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Flowmatic Demo — Popup Designer</title>
+<link rel="stylesheet" href="../css/tokens.css" />
+<link rel="stylesheet" href="../css/layout.css" />
+<link rel="stylesheet" href="../css/components.css" />
+<link rel="stylesheet" href="../css/popup-designer.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar-root"></aside>
+    <main class="main">
+      <header class="topbar">
+        <h1 class="page-title" style="margin:0; font-size:22px;">🎨 Popup Designer</h1>
+        <button class="btn btn--dark btn--sm" id="export-btn">Exportar HTML</button>
+      </header>
+      <div class="content pd-layout">
+        <div class="card pd-controls">
+          <h3 class="pd-h3">Tipo de contenido</h3>
+          <div class="pd-type-row" id="type-row">
+            <button class="pd-type-btn active" data-type="popup">Popup</button>
+            <button class="pd-type-btn" data-type="slidein">Slide In</button>
+            <button class="pd-type-btn" data-type="floatingbar">Floating Bar</button>
+          </div>
+
+          <h3 class="pd-h3">Posición en pantalla</h3>
+          <div class="pd-grid-position" id="position-grid">
+            <button class="pd-pos-btn" data-pos="tl"></button>
+            <button class="pd-pos-btn" data-pos="tc"></button>
+            <button class="pd-pos-btn" data-pos="tr"></button>
+            <button class="pd-pos-btn" data-pos="cl"></button>
+            <button class="pd-pos-btn active" data-pos="c"></button>
+            <button class="pd-pos-btn" data-pos="cr"></button>
+            <button class="pd-pos-btn" data-pos="bl"></button>
+            <button class="pd-pos-btn" data-pos="bc"></button>
+            <button class="pd-pos-btn" data-pos="br"></button>
+          </div>
+
+          <h3 class="pd-h3">Contenido</h3>
+          <label class="pd-label">Título</label>
+          <input class="pd-input" id="input-title" value="¡10% OFF en tu primera compra!" />
+          <label class="pd-label">Texto</label>
+          <textarea class="pd-input" id="input-body" rows="2">Sumate a nuestra newsletter y llevate un cupón exclusivo.</textarea>
+          <label class="pd-label">Texto del botón</label>
+          <input class="pd-input" id="input-button" value="Quiero mi descuento" />
+
+          <h3 class="pd-h3">Estilo</h3>
+          <label class="pd-label">Color de fondo</label>
+          <input class="pd-color" type="color" id="input-bgcolor" value="#5e91eb" />
+          <label class="pd-label">Color de texto</label>
+          <input class="pd-color" type="color" id="input-textcolor" value="#ffffff" />
+        </div>
+
+        <div class="pd-preview-wrap">
+          <div class="pd-store-mock">
+            <div class="pd-store-topbar"></div>
+            <div class="pd-store-hero"></div>
+            <div class="pd-store-grid">
+              <div class="pd-store-product"></div>
+              <div class="pd-store-product"></div>
+              <div class="pd-store-product"></div>
+            </div>
+            <div id="popup-preview" class="pd-content pd-content--popup pd-pos-c">
+              <button class="pd-content__close">✕</button>
+              <div class="pd-content__title" id="preview-title"></div>
+              <div class="pd-content__body" id="preview-body"></div>
+              <button class="pd-content__cta" id="preview-button"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <textarea id="export-output" style="display:none;"></textarea>
+
+  <script src="../js/icons.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/popup-designer.js"></script>
+  <script>initShell({ base: "../", active: "content" });</script>
+</body>
+</html>

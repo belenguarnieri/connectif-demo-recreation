@@ -1,0 +1,9 @@
+<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="arc" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3f6fc4"/>
+      <stop offset="100%" stop-color="#7ec2f0"/>
+    </linearGradient>
+  </defs>
+  <path d="M8 40 A22 22 0 0 1 52 40" fill="none" stroke="url(#arc)" stroke-width="12" stroke-linecap="round"/>
+</svg>

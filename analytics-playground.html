@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Flowmatic Demo — Analytics Playground</title>
+<link rel="stylesheet" href="../css/tokens.css" />
+<link rel="stylesheet" href="../css/layout.css" />
+<link rel="stylesheet" href="../css/components.css" />
+<style>
+  .ap-layout { display: grid; grid-template-columns: 300px 1fr; gap: 24px; }
+  @media (max-width: 900px) { .ap-layout { grid-template-columns: 1fr; } }
+  .ap-slider-row { margin-bottom: 22px; }
+  .ap-slider-row label { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 6px; color: var(--color-text-body); }
+  .ap-slider-row output { color: var(--color-primary); font-weight: 600; }
+  .ap-slider-row input[type="range"] { width: 100%; }
+  .ap-chart { width: 100%; height: 120px; }
+  .ap-chart path { fill: none; stroke: var(--color-primary); stroke-width: 2.5; }
+  .ap-explain { font-size: 12px; color: var(--color-text-muted); margin-top: 6px; }
+</style>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar-root"></aside>
+    <main class="main">
+      <header class="topbar">
+        <h1 class="page-title" style="margin:0; font-size:22px;">📊 Analytics Playground</h1>
+      </header>
+      <div class="content ap-layout">
+        <div class="card">
+          <h3 style="margin-bottom:14px;">Simulá tu estrategia</h3>
+          <div class="ap-slider-row">
+            <label>Tráfico semanal <output id="out-traffic">4.000</output> visitas</label>
+            <input type="range" id="in-traffic" min="500" max="20000" step="100" value="4000" />
+          </div>
+          <div class="ap-slider-row">
+            <label>Tasa de apertura de email <output id="out-open">28</output>%</label>
+            <input type="range" id="in-open" min="5" max="60" step="1" value="28" />
+            <div class="ap-explain">Afecta cuántos carritos abandonados se recuperan.</div>
+          </div>
+          <div class="ap-slider-row">
+            <label>Conversión de popups <output id="out-popup">3</output>%</label>
+            <input type="range" id="in-popup" min="0.5" max="15" step="0.5" value="3" />
+            <div class="ap-explain">Afecta cuántas visitas se convierten en compra directa.</div>
+          </div>
+          <div class="ap-slider-row">
+            <label>Ticket medio <output id="out-ticket">45</output>€</label>
+            <input type="range" id="in-ticket" min="15" max="200" step="5" value="45" />
+          </div>
+        </div>
+
+        <div>
+          <div class="grid grid--3" id="ap-kpis"></div>
+          <div class="card" style="margin-top:20px;">
+            <h3 style="margin-bottom:10px;">Evolución de ingresos (12 semanas, simulado)</h3>
+            <svg class="ap-chart" id="ap-svg" viewBox="0 0 400 120" preserveAspectRatio="none"></svg>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/icons.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/fake-data.js"></script>
+  <script src="../js/analytics-playground.js"></script>
+  <script>initShell({ base: "../", active: "analytics" });</script>
+</body>
+</html>
