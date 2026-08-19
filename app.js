@@ -3,12 +3,12 @@
 
 const NAV_ITEMS = [
   { key: "home", icon: "home", label: "Inicio", href: "__BASE__index.html" },
-  { key: "audience", icon: "users", label: "Audiencia", href: "__BASE__pages/segment-quiz.html" },
-  { key: "workflows", icon: "workflow", label: "Workflows", href: "__BASE__pages/workflow-lab.html" },
+  { key: "audience", icon: "users", label: "Audiencia", href: "__BASE__segment-quiz.html" },
+  { key: "workflows", icon: "workflow", label: "Workflows", href: "__BASE__workflow-lab.html" },
   { key: "calendar", icon: "calendar", label: "Calendario", href: "__BASE__index.html" },
-  { key: "content", icon: "doc", label: "Contenidos", href: "__BASE__pages/popup-designer.html" },
+  { key: "content", icon: "doc", label: "Contenidos", href: "__BASE__popup-designer.html" },
   { key: "ecommerce", icon: "cart", label: "E-commerce", href: "__BASE__index.html" },
-  { key: "analytics", icon: "chart", label: "Analítica", href: "__BASE__pages/analytics-playground.html" },
+  { key: "analytics", icon: "chart", label: "Analítica", href: "__BASE__analytics-playground.html" },
   { key: "settings", icon: "gear", label: "Ajustes", href: "__BASE__index.html" },
 ];
 
@@ -25,11 +25,11 @@ function initShell({ base = "", active = "home" } = {}) {
     }).join("");
 
     root.innerHTML = `
-      <img class="sidebar__logo" src="${base}assets/logo.svg" alt="Logo" />
+      <img class="sidebar__logo" src="${base}logo.svg" alt="Logo" />
       <nav class="sidebar__nav">${items}</nav>
       <div class="sidebar__footer">
         <div class="sidebar__item" title="Cuenta demo">
-          <img src="${base}assets/logo.svg" width="20" height="20" alt="" />
+          <img src="${base}logo.svg" width="20" height="20" alt="" />
         </div>
       </div>
     `;
